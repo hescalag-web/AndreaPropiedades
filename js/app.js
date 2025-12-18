@@ -9,13 +9,23 @@ fetch('data.json')
   });
 
 function openView(id, hash = '') {
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  // cerrar solo overlays
+  document.querySelectorAll('.overlay').forEach(v =>
+    v.classList.remove('active')
+  );
+
+  const view = document.getElementById(id);
+  if (view.classList.contains('overlay')) {
+    view.classList.add('active');
+  }
+
   if (hash) location.hash = hash;
 }
 
 function closeView() {
-  document.querySelectorAll('.overlay').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.overlay').forEach(v =>
+    v.classList.remove('active')
+  );
   location.hash = '';
 }
 
@@ -55,14 +65,13 @@ window.addEventListener('hashchange', handleHash);
 
 function handleHash() {
   const hash = location.hash.replace('#', '');
-  if (hash.startsWith('propiedad')) {
-    openView('property-detail');
-  } else if (hash === 'propiedades') {
+
+  if (hash === 'propiedades') {
     openView('properties');
   } else if (hash === 'contacto') {
     openView('contact');
-  } else {
-    openView('home');
+  } else if (hash.startsWith('propiedad')) {
+    openView('property-detail');
   }
 }
 

@@ -42,7 +42,7 @@ function goToSlide(index) {
 
 function resetInterval() {
   clearInterval(interval);
-  interval = setInterval(nextSlide, 6000);
+  interval = setInterval(nextSlide, 4000);
 }
 
 next.addEventListener("click", () => {
@@ -55,4 +55,4 @@ prev.addEventListener("click", () => {
   resetInterval();
 });
 
-interval = setInterval(nextSlide, 6000);
+interval = setInterval(nextSlide, 4000);

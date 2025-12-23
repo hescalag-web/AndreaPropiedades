@@ -448,12 +448,6 @@ body {
 }
 
 /* INFO */
-.property-info {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-}
-
 .price strong {
   font-size: 34px;
 }
@@ -466,8 +460,7 @@ body {
 
 .info-left {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 20px;
 }
 
 .features {

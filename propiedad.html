@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Detalle Propiedad</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="brand">
+                <span class="logo-text">Andrea Flores</span>
+                <small>Corredora de Propiedades</small>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="propiedades.html">Propiedades</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <section class="detail">
+            <div class="carousel">
+                <img src="images/logo.jpg" class="active" />
+                <img src="images/depto.jpg" />
+                <img src="images/casa.jpg" />
+                <button class="prev" onclick="moveSlide(-1)">‹</button>
+                <button class="next" onclick="moveSlide(1)">›</button>
+            </div>
+
+            <div class="info">
+                <h1>Casa en Lago Rapel</h1>
+                <p>3 Dormitorios · 2 Baños · 120 m²</p>
+                <p><strong>Precio:</strong> UF 4.500</p>
+                <iframe src="https://www.google.com/maps?q=Lago+Rapel&output=embed"></iframe>
+            </div>
+        </section>
+
+        <a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
+        <script src="js/main.js"></script>
+    </body>
+</html>

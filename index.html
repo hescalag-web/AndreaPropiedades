@@ -1,83 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Corredora de Propiedades</title>
-  <meta name="description" content="Compra, venta y arriendo de propiedades">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Andrea Flores | Corredora de Propiedades</title>
+    <meta name="description" content="Venta y arriendo de propiedades en Santiago y Lago Rapel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="logo-text"><img src="images/logo.jpg" height="100" width="200"></div>
+        <!--span class="logo-text">Andrea Flores</span>
+        <small>Corredora de Propiedades</small-->
+      </div>
 
-<header class="header">
-  <div class="logo">Corredora</div>
-  <nav>
-    <a onclick="openView('home')">Inicio</a>
-    <a onclick="openView('properties', 'propiedades')">Propiedades</a>
-    <a onclick="openView('contact', 'contacto')">Contacto</a>
-  </nav>
-</header>
+      <nav class="nav">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
 
-<!-- HOME -->
-<section id="home" class="view active">
-  <h1>Encuentra tu próximo hogar</h1>
-  <p>Compra, venta y arriendo de propiedades</p>
+    <section class="hero">
+      <h1>Tu próximo hogar comienza aquí</h1>
+      <p>Santiago · Lago Rapel</p>
+      <a class="btn" href="propiedades.html">Ver propiedades</a>
+    </section>
 
-  <button class="primary" onclick="openView('properties', 'propiedades')">
-    Ver Propiedades
-  </button>
-</section>
+    <section class="features">
+      <div><h3>Compra</h3><p>Asesoría completa.</p></div>
+      <div><h3>Venta</h3><p>Gestión profesional.</p></div>
+      <div><h3>Arriendo</h3><p>Administración segura.</p></div>
+    </section>
 
-<!-- PROPIEDADES -->
-<section id="properties" class="view overlay">
-  <button class="close" onclick="closeView()">✕</button>
-
-  <h2>Propiedades disponibles</h2>
-
-  <div class="filters">
-    <select id="priceFilter">
-      <option value="">Filtrar por precio</option>
-      <option value="UF 4.200">Hasta UF 5.000</option>
-      <option value="UF 8.500">Sobre UF 5.000</option>
-    </select>
-  </div>
-
-  <div class="grid"></div>
-</section>
-
-<!-- DETALLE -->
-<section id="property-detail" class="view overlay">
-  <button class="close" onclick="closeView()">✕</button>
-
-  <div class="detail">
-    <img id="detail-img">
-    <div class="detail-info">
-      <h2 id="detail-title"></h2>
-      <p class="price" id="detail-price"></p>
-      <p id="detail-desc"></p>
-      <ul id="detail-features"></ul>
-
-      <iframe id="detail-map"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contact" class="view overlay">
-  <button class="close" onclick="closeView()">✕</button>
-
-  <h2>Contacto</h2>
-  <form class="contact-form">
-    <input placeholder="Nombre">
-    <input placeholder="Email">
-    <textarea placeholder="Mensaje"></textarea>
-    <button class="primary">Enviar</button>
-  </form>
-</section>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/56912345678" class="whatsapp" target="_blank">💬</a>
-
-<script src="js/app.js"></script>
-</body>
+    <a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
+  </body>
 </html>

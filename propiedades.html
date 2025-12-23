@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Propiedades | Andrea Flores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="logo-text"><img src="images/logo.jpg" height="100" width="200"></div>
+        <!--span class="logo-text">Andrea Flores</span>
+        <small>Corredora de Propiedades</small-->
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="filters">
+      <select id="comuna">
+        <option value="">Todas las comunas</option>
+        <option value="Santiago">Santiago</option>
+        <option value="Rapel">Lago Rapel</option>
+      </select>
+      <select id="precio">
+        <option value="">Todos los precios</option>
+        <option value="bajo">Hasta UF 5.000</option>
+        <option value="alto">Sobre UF 5.000</option>
+      </select>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img src="images/casa.jpg" alt="Casa Lago Rapel" />
+        <h3>Casa en Lago Rapel</h3>
+        <p>UF 4.500</p>
+        <a class="btn" href="propiedad.html">Ver detalle</a>
+      </article>
+
+      <article class="card">
+        <img src="images/depto.jpg" alt="Depto Santiago" />
+        <h3>Departamento en Santiago</h3>
+        <p>UF 6.800</p>
+        <a class="btn" href="propiedad.html">Ver detalle</a>
+      </article>
+    </section>
+
+    <a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
+  </body>
+</html>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <title>Detalle Propiedad</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        <meta charset="UTF-8">
+        <title>Departamento en Estación Central | Andrea Flores</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
+        <!-- HEADER -->
         <header class="header">
             <div class="brand">
                 <div class="logo-text"><img src="images/logo.jpg" height="100" width="200"></div>
@@ -15,30 +16,74 @@
             </div>
 
             <nav class="nav">
-                <a href="index.html">Inicio</a>
-                <a href="propiedades.html" class="active">Propiedades</a>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="propiedades.html">Propiedades</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
         </header>
 
-        <section class="detail">
-            <div class="carousel">
-                <img src="images/logo.jpg" class="active" />
-                <img src="images/depto.jpg" />
-                <img src="images/casa.jpg" />
-                <button class="prev" onclick="moveSlide(-1)">‹</button>
-                <button class="next" onclick="moveSlide(1)">›</button>
-            </div>
+        <main class="property-page">
+            <!-- GALERÍA -->
+            <section class="gallery">
+                <div class="gallery-main">
+                    <img src="img/prop1.jpg" alt="Propiedad principal">
+                </div>
 
-            <div class="info">
-                <h1>Casa en Lago Rapel</h1>
-                <p>3 Dormitorios · 2 Baños · 120 m²</p>
-                <p><strong>Precio:</strong> UF 4.500</p>
-                <iframe src="https://www.google.com/maps?q=Lago+Rapel&output=embed"></iframe>
-            </div>
-        </section>
+                <div class="gallery-grid">
+                    <img src="img/prop2.jpg">
+                    <img src="img/prop3.jpg">
+                    <img src="img/prop4.jpg">
+                    <div class="gallery-more">
+                        <span>📷 Ver todas (11)</span>
+                        <span>▶ Ver video</span>
+                    </div>
+                </div>
+            </section>
 
-        <a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
-        <script src="js/carousel.js"></script>
+            <!-- INFO -->
+            <section class="property-info">
+                <div class="info-left">
+                    <div class="price">
+                        <strong>UF 2.190</strong>
+                        <span>$ 86.936.999</span>
+                    </div>
+                    <ul class="features">
+                        <li><strong>Código:</strong> 102393118</li>
+                        <li><strong>Tipo:</strong> Departamento</li>
+                        <li><strong>Ciudad:</strong> Santiago</li>
+                        <li><strong>Comuna:</strong> Estación Central</li>
+                        <li><strong>Dirección:</strong> Av. María Rozas Velásquez</li>
+                        <li><strong>Orientación:</strong> Norte</li>
+                    </ul>
+
+                    <ul class="features">
+                        <li><strong>Dormitorios:</strong> 2</li>
+                        <li><strong>Baños:</strong> 1</li>
+                        <li><strong>Estacionamientos:</strong> 1</li>
+                        <li><strong>Sup. total:</strong> 43 m²</li>
+                        <li><strong>M² útiles:</strong> 41 m²</li>
+                        <li><strong>Gasto común:</strong> $55.000</li>
+                    </ul>
+                </div>
+
+                <!-- CONTACTO -->
+                <aside class="contact-box">
+                    <h3>Contáctenos</h3>
+                    <p><strong>Andrea Flores Propiedades</strong></p>
+                    <p>Santiago – Lago Rapel</p>
+                    <p>Lun a Vie: 9:30 a 18:00</p>
+
+                    <form>
+                        <input type="text" placeholder="Su nombre">
+                        <input type="email" placeholder="Correo">
+                        <input type="tel" placeholder="Teléfono">
+                        <textarea placeholder="Mensaje"></textarea>
+                        <button type="submit">Enviar consulta</button>
+                    </form>
+                </aside>
+
+            </section>
+
+        </main>
     </body>
 </html>

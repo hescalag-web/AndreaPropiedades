@@ -22,30 +22,31 @@
     </header>
 
     <section class="filters">
-      <select id="comuna">
+      <select id="filterComuna">
         <option value="">Todas las comunas</option>
         <option value="Santiago">Santiago</option>
-        <option value="Rapel">Lago Rapel</option>
+        <option value="Lago Rapel">Lago Rapel</option>
       </select>
-      <select id="precio">
+
+      <select id="filterPrecio">
         <option value="">Todos los precios</option>
         <option value="bajo">Hasta UF 5.000</option>
         <option value="alto">Sobre UF 5.000</option>
       </select>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <img src="images/casa.jpg" alt="Casa Lago Rapel" />
-        <h3>Casa en Lago Rapel</h3>
-        <p>UF 4.500</p>
+    <section class="grid" id="propertyGrid">
+      <article class="card" data-comuna="Santiago" data-precio="6800">
+        <img src="images/casa.jpg" />
+        <h3>Departamento en Santiago</h3>
+        <p>UF 6.800</p>
         <a class="btn" href="propiedad.html">Ver detalle</a>
       </article>
 
-      <article class="card">
-        <img src="images/depto.jpg" alt="Depto Santiago" />
-        <h3>Departamento en Santiago</h3>
-        <p>UF 6.800</p>
+      <article class="card" data-comuna="Lago Rapel" data-precio="4500">
+        <img src="images/depto.jpg" />
+        <h3>Casa en Lago Rapel</h3>
+        <p>UF 4.500</p>
         <a class="btn" href="propiedad.html">Ver detalle</a>
       </article>
     </section>

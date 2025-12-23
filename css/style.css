@@ -118,19 +118,16 @@ body {
   position:relative;
 }
 
-.carousel
-img {
+.carousel img {
   display:none;
   width:100%;
 }
 
-.carousel
-img.active {
+.carousel img.active {
   display:block;
 }
 
-.carousel
-button {
+.carousel button {
   position:absolute;
   top:50%;
   transform:translateY(-50%);
@@ -162,8 +159,7 @@ button {
 
 .hero-slider {
   position: relative;
-  align-content: center;
-  width: 90%;
+  width: 100%;
   height: 70vh;
   overflow: hidden;
 }
@@ -243,8 +239,13 @@ button {
   z-index: 5;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
 
 /* Dots */
 .dots {
@@ -268,6 +269,7 @@ button {
 .dots span.active {
   background: #fff;
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .header {

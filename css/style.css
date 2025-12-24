@@ -91,7 +91,7 @@ body {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
-  padding:40px;
+  padding:20px;
 }
 
 .card img {
@@ -285,7 +285,7 @@ body {
 
 /* ===== PROPIEDADES DESTACADAS ===== */
 .featured {
-  padding: 80px 60px;
+  padding: 40px 60px;
   background: #fff;
 }
 
@@ -488,8 +488,8 @@ body {
 /* ===== FOOTER ===== */
 .site-footer {
   background: #f6f4f3;
-  padding: 60px 20px 30px;
-  margin-top: 80px;
+  padding: 40px 20px 30px;
+  margin-top: 50px;
   color: #555;
 }
 

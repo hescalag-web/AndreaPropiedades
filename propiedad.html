@@ -6,6 +6,36 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <script>
+            fetch("https://mindicador.cl/api/uf")
+            .then(response => response.json())
+            .then(data => {
+                const uf = data.serie[0].valor;
+                document.getElementById("valorUF").innerText =
+                new Intl.NumberFormat('es-CL', {
+                    style: 'currency',
+                    currency: 'CLP'
+                }).format(uf);
+            })
+            .catch(error => {
+                document.getElementById("valorUF").innerText = "UF no disponible";
+            });
+        </script>
+        <script>
+            const precioUF = 5000;
+
+            fetch("https://mindicador.cl/api/uf")
+            .then(r => r.json())
+            .then(d => {
+                const ufHoy = d.serie[0].valor;
+                const total = precioUF * ufHoy;
+                document.getElementById("precioCLP").innerText =
+                new Intl.NumberFormat('es-CL', {
+                    style: 'currency',
+                    currency: 'CLP'
+                }).format(total);
+            });
+        </script>
 
         <!-- HEADER -->
         <header class="header">
@@ -26,49 +56,65 @@
 
         <main class="property-page">
             <!-- GALERÍA -->
-            <section class="gallery">
+            <section class="property-gallery">
+                <!-- Imagen principal -->
                 <div class="gallery-main">
-                    <img src="img/prop1.jpg" alt="Propiedad principal">
+                    <img id="mainImage" src="images/CasaHernan/principal.jpeg" alt="Propiedad">
+                </div>
+                <!-- Miniaturas -->
+                 <div class="gallery-thumbs">
+                    <img src="images/CasaHernan/terraza.jpeg" onclick="changeImage(this)">
+                    <img src="images/CasaHernan/living.jpeg" onclick="changeImage(this)">
+                    <img src="images/CasaHernan/comedor.jpeg" onclick="changeImage(this)">
+                    <img src="images/CasaHernan/cocina.jpeg" onclick="changeImage(this)">
+
+                    <!-- Botón ver todas -->
+                    <button class="view-all" onclick="openGallery()">Ver todas</button>
                 </div>
 
-                <div class="gallery-grid">
-                    <img src="img/prop2.jpg">
-                    <img src="img/prop3.jpg">
-                    <img src="img/prop4.jpg">
-                    <img src="img/prop5.jpg">
-                    <div class="gallery-more">
-                        <span>📷 Ver todas (11)</span>
-                        <span>▶ Ver video</span>
-                    </div>
-                </div>
             </section>
+
+            <!-- MODAL GALERÍA -->
+            <div class="gallery-modal" id="galleryModal">
+                <span class="close" onclick="closeGallery()">×</span>
+                <div class="modal-content">
+                    <img src="images/CasaHernan/principal.jpeg">
+                    <img src="images/CasaHernan/terraza.jpeg">
+                    <img src="images/CasaHernan/living.jpeg">
+                    <img src="images/CasaHernan/comedor.jpeg">
+                    <img src="images/CasaHernan/cocina.jpeg">
+                    <img src="images/CasaHernan/cocina2.jpeg">
+                    <img src="images/CasaHernan/patio.jpeg">
+                </div>
+            </div>
 
             <!-- INFO -->
             <section>
                 <div class="info-left">
                     <div class="price">
-                        <strong>UF 2.190</strong>
-                        <span>$ 86.936.999</span>
+                        <span>Valor UF: <bold id="valorUF">Cargando UF...</bold></span>
+                        <span>Precio: <bold>5.000 UF</bold></span>
+                        <span>valor CLP: <bold id="precioCLP">Cargando...</bold></span>
                     </div>
                     <ul class="featuress">
                         <li><strong>Código:</strong> 102393118</li>
-                        <li><strong>Tipo:</strong> Departamento</li>
-                        <li><strong>Ciudad:</strong> Santiago</li>
-                        <li><strong>Comuna:</strong> Estación Central</li>
-                        <li><strong>Dirección:</strong> Av. María Rozas Velásquez</li>
+                        <li><strong>Tipo:</strong> Casa</li>
+                        <li><strong>Ciudad:</strong>Lago Rapel</li>
+                        <li><strong>Comuna:</strong> Las Cabras</li>
+                        <li><strong>Dirección:</strong> Santa Clarisa Sitio15</li>
                         <li><strong>Orientación:</strong> Norte</li>
                     </ul>
 
                     <ul class="featuress">
-                        <li><strong>Dormitorios:</strong> 2</li>
-                        <li><strong>Baños:</strong> 1</li>
-                        <li><strong>Estacionamientos:</strong> 1</li>
-                        <li><strong>Sup. total:</strong> 43 m²</li>
-                        <li><strong>M² útiles:</strong> 41 m²</li>
-                        <li><strong>Gasto común:</strong> $55.000</li>
+                        <li><strong>Dormitorios:</strong> 5</li>
+                        <li><strong>Baños:</strong> 3</li>
+                        <li><strong>Estacionamientos:</strong> 4</li>
+                        <li><strong>Sup. total:</strong> 500 m²</li>
+                        <li><strong>M² útiles:</strong> 140 m²</li>
                     </ul>
                 </div>
             </section>
         </main>
+        <script src="js/galeria.js"></script>
     </body>
 </html>

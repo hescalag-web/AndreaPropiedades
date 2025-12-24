@@ -531,11 +531,11 @@ body {
 /* FOOTER BOTTOM */
 .footer-bottom {
   max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 30px;
+  margin: 20px auto 0;
+  padding-top: 20px;
   border-top: 1px solid #ddd;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

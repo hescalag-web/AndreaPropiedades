@@ -8,7 +8,7 @@ fetch('json/propiedades.json')
 
     const galeria4 = document.getElementById('galeria4');
     prop.imagenes_4.forEach(img => {
-      galeria4.innerHTML += `<img src="${img}" onclick="changeImage(this)"/>`;
+      galeria4.innerHTML += `<img src="${img}" onclick="changeImage(this)">`;
     });
 
     

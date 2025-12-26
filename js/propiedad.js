@@ -11,6 +11,11 @@ fetch('json/propiedades.json')
       galeria4.innerHTML += `<img src="${img}" onclick="changeImage(this)">`;
     });
 
+    const galCompleta = document.getElementById('galCompleta');
+    prop.imagenes.forEach(images => {
+      galCompleta.innerHTML += `<img src="${images}">`;
+    });
+
     
 
     document.getElementById('titulo').innerText =

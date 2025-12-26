@@ -59,33 +59,19 @@
             <section class="property-gallery">
                 <!-- Imagen principal -->
                 <div class="gallery-main">
-                    <img id="imagenPrinc"> <!--src="images/CasaHernan/principal.jpeg" alt="Propiedad"-->
+                    <img id="imagenPrinc"> <!-- JS -->
                 </div>
-                <!-- Miniaturas -->
+                <!-- Miniaturas galeria.js -->
                  <div class="gallery-thumbs" id="galeria4">
-                    <!--img id="galeria4"-->
-                    <!--img src="images/CasaHernan/living.jpeg" onclick="changeImage(this)">
-                    <img src="images/CasaHernan/comedor.jpeg" onclick="changeImage(this)">
-                    <img src="images/CasaHernan/cocina.jpeg" onclick="changeImage(this)"-->
-
                     <!-- Botón ver todas -->
                     <button class="view-all" onclick="openGallery()">Ver todas</button>
                 </div>
-
             </section>
 
             <!-- MODAL GALERÍA -->
             <div class="gallery-modal" id="galleryModal">
                 <span class="close" onclick="closeGallery()">×</span>
-                <div class="modal-content">
-                    <img src="images/CasaHernan/principal.jpeg">
-                    <img src="images/CasaHernan/terraza.jpeg">
-                    <img src="images/CasaHernan/living.jpeg">
-                    <img src="images/CasaHernan/comedor.jpeg">
-                    <img src="images/CasaHernan/cocina.jpeg">
-                    <img src="images/CasaHernan/cocina2.jpeg">
-                    <img src="images/CasaHernan/patio.jpeg">
-                </div>
+                <div class="modal-content" id="galCompleta"></div> <!-- Galeria Completa galeria.js -->
             </div>
 
             <!-- INFO -->

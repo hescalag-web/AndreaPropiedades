@@ -6,7 +6,7 @@ fetch('json/propiedades.json')
     document.getElementById('imagenPrinc').src =
       `${prop.imagen_princicipal}`;
 
-    const galeria4 = document.getElementById('galeria4').src;
+    const galeria4 = document.getElementById('galeria4');
     prop.imagenes_4.forEach(img => {
       galeria4.innerHTML += `<img src="${img}" />`;
     });

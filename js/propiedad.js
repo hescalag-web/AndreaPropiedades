@@ -3,7 +3,7 @@ fetch('json/propiedades.json')
   .then(data => {
     const prop = data[0]; // o buscar por ID
 
-    document.getElementById('imagenPrinc').innerText =
+    document.getElementById('imagenPrinc').src =
       `${prop.imagen_princicipal}`;
 
     document.getElementById('titulo').innerText =

@@ -26,11 +26,11 @@ fetch('json/propiedades.json')
         <li><strong>Comuna:</strong> ${prop.comuna}</li>
         <li><strong>Dirección:</strong> ${prop.direccion}</li>
         <li><strong>Orientación:</strong> ${prop.orientacion}</li>
-        
+
         <li><strong>Dormitorios:</strong> ${prop.dormitorios}</li>
-        <li><strong>Baños:</strong> ${prop.banos}</li>"
-        <li><strong>Estacionamiento:</strong> ${prop.estacionamiento}</li>"
-        <li><strong>Superfice Total:</strong> ${prop.superficie_total}</li>"
-        <li><strong>Superfice Util:</strong> ${prop.superficie_util}</li>"
+        <li><strong>Baños:</strong> ${prop.banos}</li>
+        <li><strong>Estacionamiento:</strong> ${prop.estacionamiento}</li>
+        <li><strong>Superfice Total:</strong> ${prop.superficie_total}</li>
+        <li><strong>Superfice Util:</strong> ${prop.superficie_util}</li>
     `;
   });

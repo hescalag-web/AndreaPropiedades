@@ -21,9 +21,9 @@ fetch('json/propiedades.json')
 
     document.getElementById('datos').innerHTML = `
         <span><strong>Código:</strong> ${prop.id}</span>
-        <span><strong>Código:</strong> ${prop.tipo}</span>
-        <span><strong>Código:</strong> ${prop.ciudad}</span>
-        <span><strong>Código:</strong> ${prop.comuna}</span>
+        <span><strong>Tipo:</strong> ${prop.tipo}</span>
+        <span><strong>Ciudad:</strong> ${prop.ciudad}</span>
+        <span><strong>Comuna:</strong> ${prop.comuna}</span>
         <span><strong>Dirección:</strong> ${prop.direccion}</span>
         <span><strong>Orientación:</strong> ${prop.orientacion}</span>
         <span><strong>Dormitorios:</strong> ${prop.dormitorios}</span>

@@ -204,8 +204,8 @@ body {
 .btn {
   display: inline-block;
   padding: 12px 28px;
-  background: #fff;
-  color: #000;
+  background: #414d3e;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   border-radius: 4px;
@@ -213,8 +213,8 @@ body {
 }
 
 .btn:hover {
-  background: #b33838;
-  color: #26832f;
+  background: #fff;
+  color: #000;
 }
 
 /* Flechas */

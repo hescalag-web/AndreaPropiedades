@@ -25,11 +25,11 @@ fetch('json/propiedades.json')
         <li><strong>Tipo:</strong> ${prop.tipo}</li>
         <li><strong>Baños:</strong> ${prop.banos}</li>
         <li><strong>Ciudad:</strong> ${prop.ciudad}</li>
-        <li><strong>Comuna:</strong> ${prop.comuna}</li>
         <li><strong>Estacionamiento:</strong> ${prop.estacionamientos}</li>
-        <li><strong>Dirección:</strong> ${prop.direccion}</li>
+        <li><strong>Comuna:</strong> ${prop.comuna}</li>
         <li><strong>Superfice Total:</strong> ${prop.superficie_total}</li>
-        <li><strong>Orientación:</strong> ${prop.orientacion}</li>
+        <li><strong>Dirección:</strong> ${prop.direccion}</li>
         <li><strong>Superfice Util:</strong> ${prop.superficie_util}</li>
+        <li><strong>Orientación:</strong> ${prop.orientacion}</li>
     `;
   });

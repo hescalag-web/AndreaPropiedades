@@ -16,6 +16,12 @@ fetch('json/propiedades.json')
       galCompleta.innerHTML += `<img src="${images}">`;
     });
 
+    document.getElementById('titulo').innerText =
+      `${prop.tipo} en ${prop.ciudad} - ${prop.comuna}`;
+
+
+
+
     
 
     document.getElementById('titulo').innerText =

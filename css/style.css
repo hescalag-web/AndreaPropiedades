@@ -467,6 +467,9 @@ body {
   list-style: none;
   padding: 0;
   font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 40px;
 }
 
 .featuress li {

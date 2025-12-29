@@ -20,11 +20,17 @@ fetch('json/propiedades.json')
       `${prop.tipo} en ${prop.ciudad} - ${prop.comuna}`;
 
     document.getElementById('datos').innerHTML = `
-        <span><strong>Código:</strong> ${prop.id}</span><pre><strong>                   Código:</strong> ${prop.id}</pre>
+        <span><strong>Código:</strong> ${prop.id}</span>
         <span><strong>Código:</strong> ${prop.tipo}</span>
         <span><strong>Código:</strong> ${prop.ciudad}</span>
         <span><strong>Código:</strong> ${prop.comuna}</span>
         <span><strong>Dirección:</strong> ${prop.direccion}</span>
         <span><strong>Orientación:</strong> ${prop.orientacion}</span>
+        <span><strong>Orientación:</strong> ${prop.orientacion}</span>
+        <span><strong>Orientación:</strong> ${prop.dormitorios}</span>
+        <span><strong>Orientación:</strong> ${prop.banos}</span>"
+        <span><strong>Orientación:</strong> ${prop.estacionamiento}</span>"
+        <span><strong>Orientación:</strong> ${prop.superficie_total}</span>"
+        <span><strong>Orientación:</strong> ${prop.superficie_util}</span>"
     `;
   });

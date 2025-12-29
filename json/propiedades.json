@@ -9,8 +9,8 @@
     "dormitorios": 4,
     "banos": 3,
     "estacionamientos": 4,
-    "superficie_total": 500,
-    "superficie_util": 140,
+    "superficie_total": "500 M2",
+    "superficie_util": "140 M2",
     "precio_uf": 5000,
     "imagen_princicipal": [
         "images/CasaHernan/principal.jpeg"

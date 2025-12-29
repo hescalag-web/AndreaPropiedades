@@ -20,16 +20,16 @@ fetch('json/propiedades.json')
       `${prop.tipo} en ${prop.ciudad} - ${prop.comuna}`;
 
     document.getElementById('datos').innerHTML = `
-        <span><strong>Código:</strong> ${prop.id}</span>
-        <span><strong>Tipo:</strong> ${prop.tipo}</span>
-        <span><strong>Ciudad:</strong> ${prop.ciudad}</span>
-        <span><strong>Comuna:</strong> ${prop.comuna}</span>
-        <span><strong>Dirección:</strong> ${prop.direccion}</span>
-        <span><strong>Orientación:</strong> ${prop.orientacion}</span>
-        <span><strong>Dormitorios:</strong> ${prop.dormitorios}</span>
-        <span><strong>Baños:</strong> ${prop.banos}</span>"
-        <span><strong>Estacionamiento:</strong> ${prop.estacionamiento}</span>"
-        <span><strong>Superfice Total:</strong> ${prop.superficie_total}</span>"
-        <span><strong>Superfice Util:</strong> ${prop.superficie_util}</span>"
+        <li><strong>Código:</strong> ${prop.id}</li>
+        <li><strong>Tipo:</strong> ${prop.tipo}</li>
+        <li><strong>Ciudad:</strong> ${prop.ciudad}</li>
+        <li><strong>Comuna:</strong> ${prop.comuna}</li>
+        <li><strong>Dirección:</strong> ${prop.direccion}</li>
+        <li><strong>Orientación:</strong> ${prop.orientacion}</li>
+        <li><strong>Dormitorios:</strong> ${prop.dormitorios}</li>
+        <li><strong>Baños:</strong> ${prop.banos}</li>"
+        <li><strong>Estacionamiento:</strong> ${prop.estacionamiento}</li>"
+        <li><strong>Superfice Total:</strong> ${prop.superficie_total}</li>"
+        <li><strong>Superfice Util:</strong> ${prop.superficie_util}</li>"
     `;
   });

@@ -20,7 +20,7 @@ fetch('json/propiedades.json')
       `${prop.tipo} en ${prop.ciudad} - ${prop.comuna}`;
 
     document.getElementById('datos').innerHTML = `
-        <span><strong>Código:</strong> ${prop.id}</span></t><span><strong>Código:</strong> ${prop.id}</span>
+        <span><strong>Código:</strong> ${prop.id}</span><pre><strong>                   Código:</strong> ${prop.id}</pre>
         <span><strong>Código:</strong> ${prop.tipo}</span>
         <span><strong>Código:</strong> ${prop.ciudad}</span>
         <span><strong>Código:</strong> ${prop.comuna}</span>

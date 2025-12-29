@@ -466,14 +466,21 @@ body {
 .featuress {
   list-style: none;
   padding: 0;
-  font-size: 14px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px 40px;
 }
 
 .featuress li {
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 0.8;
+}
+
+@media (max-width: 768px) {
+  .lista-dos-columnas {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* RESPONSIVE */

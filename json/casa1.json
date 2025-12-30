@@ -1,0 +1,34 @@
+[
+  {
+    "id": "102393118",
+    "tipo": "Casa",
+    "ciudad": "Lago Rapel",
+    "comuna": "Las Cabras",
+    "direccion": "Santa Clarisa Sitio 15",
+    "orientacion": "Norte",
+    "dormitorios": 4,
+    "banos": 3,
+    "estacionamientos": 4,
+    "superficie_total": "500 M2",
+    "superficie_util": "140 M2",
+    "precio_uf": 5000,
+    "imagen_princicipal": [
+        "images/Casa1/principal.jpeg"
+    ],
+    "imagenes_4": [
+        "images/Casa1/terraza.jpeg",
+        "images/Casa1/living.jpeg",
+        "images/Casa1/comedor.jpeg",
+        "images/Casa1/cocina.jpeg"
+    ],
+    "imagenes": [
+        "images/Casa1/principal.jpeg",
+        "images/Casa1/terraza.jpeg",
+        "images/Casa1/living.jpeg",
+        "images/Casa1/comedor.jpeg",
+        "images/Casa1/cocina.jpeg",
+        "images/Casa1/cocina2.jpeg",
+        "images/Casa1/patio.jpeg"
+    ]
+  }
+]

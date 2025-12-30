@@ -1,4 +1,4 @@
-fetch('json/propiedades.json')
+fetch('json/casa1.json')
   .then(res => res.json())
   .then(data => {
     const prop = data[0]; // o buscar por ID

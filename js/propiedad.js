@@ -29,7 +29,7 @@ fetch('json/propiedad.json')
       `${prop.tipo} en ${prop.ciudad} - ${prop.comuna}`;
     
     document.getElementById('valor').innerText =
-      `Precio: <bold>${prop.precio_uf}</bold>`;
+      `Precio: ${prop.precio_uf}`;
 
     document.getElementById('datos').innerHTML = `
         <li><strong>Código:</strong> ${prop.id}</li>

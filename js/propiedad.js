@@ -1,7 +1,16 @@
-fetch('json/casa1.json')
+const params = new URLSearchParams(window.location.search);
+const propertyId = params.get('id');
+
+fetch('json/propiedad.json')
   .then(res => res.json())
   .then(data => {
-    const prop = data[0]; // o buscar por ID
+
+    const prop = data.find(p => p.id === propertyId);
+
+    if (!prop) {
+      document.body.innerHTML = '<h2>Propiedad no encontrada</h2>';
+      return;
+    }
 
     document.getElementById('imagenPrinc').src =
       `${prop.imagen_princicipal}`;

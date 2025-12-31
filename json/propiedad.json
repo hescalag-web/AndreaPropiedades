@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1",
+    "tipo": "Casa",
+    "ciudad": "Lago Rapel",
+    "comuna": "Las Cabras",
+    "direccion": "Santa Clarisa Sitio 15",
+    "orientacion": "Norte",
+    "dormitorios": 4,
+    "banos": 3,
+    "estacionamientos": 4,
+    "superficie_total": "500 m²",
+    "superficie_util": "140 m²",
+    "precio_uf": 5000,
+    "imagen_princicipal": [
+        "images/Casa1/principal.jpeg"
+    ],
+    "imagenes_4": [
+        "images/Casa1/terraza.jpeg",
+        "images/Casa1/living.jpeg",
+        "images/Casa1/comedor.jpeg",
+        "images/Casa1/cocina.jpeg"
+    ],
+    "imagenes": [
+        "images/Casa1/principal.jpeg",
+        "images/Casa1/terraza.jpeg",
+        "images/Casa1/living.jpeg",
+        "images/Casa1/comedor.jpeg",
+        "images/Casa1/cocina.jpeg",
+        "images/Casa1/cocina2.jpeg",
+        "images/Casa1/patio.jpeg"
+    ]
+  },
+  {
+    "id": "2",
+    "tipo": "Casa",
+    "ciudad": "Santiago",
+    "comuna": "Huechuraba",
+    "direccion": "Santa Marta 6950",
+    "orientacion": "Oriente",
+    "dormitorios": 4,
+    "banos": 3,
+    "estacionamientos": 2,
+    "superficie_total": "100 m²",
+    "superficie_util": "103 m²",
+    "precio_uf": 3000,
+    "imagen_princicipal": [
+        "images/Casa2/estacionamiento.jpeg"
+    ],
+    "imagenes_4": [
+        "images/Casa2/terraza.jpeg",
+        "images/Casa2/living.jpeg",
+        "images/Casa2/comedor.jpeg",
+        "images/Casa2/cocina.jpeg"
+    ],
+    "imagenes": [
+        "images/Casa2/estacionamiento.jpeg",
+        "images/Casa2/terraza.jpeg",
+        "images/Casa2/living.jpeg",
+        "images/Casa12/comedor.jpeg",
+        "images/Casa2/cocina.jpeg"
+    ]
+  }
+]

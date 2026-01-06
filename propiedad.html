@@ -6,57 +6,6 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!--script>
-            fetch("https://mindicador.cl/api/uf")
-            .then(response => response.json())
-            .then(data => {
-                const uf = data.serie[0].valor;
-                document.getElementById("valorUF").innerText =
-                new Intl.NumberFormat('es-CL', {
-                    style: 'currency',
-                    currency: 'CLP'
-                }).format(uf);
-            })
-            .catch(error => {
-                document.getElementById("valorUF").innerText = "UF no disponible";
-            });
-        </script-->
-        <script>
-            fetch('json/propiedad.json')
-                .then(res => res.json())
-                .then(data => {
-                    const prop = data.find(p => p.id === propertyId);
-
-                    if (!prop) {
-                        document.body.innerHTML = '<h2>Propiedad no encontrada</h2>';
-                        return;
-                    }
-                    const precioUF = prop.precio_uf;
-
-                    document.getElementById("precioUF").innerText =
-                        new Intl.NumberFormat('es-CL').format(precioUF) + " UF";
-
-                    fetch("https://mindicador.cl/api/uf")
-                        .then(r => r.json())
-                        .then(d => {
-                            const ufHoy = d.serie[0].valor;
-                            const total = precioUF * ufHoy;
-                            
-                            document.getElementById("valorUF").innerText =
-                                new Intl.NumberFormat('es-CL', {
-                                    style: 'currency',
-                                    currency: 'CLP'
-                                }).format(ufHoy);
-
-                            document.getElementById("precioCLP").innerText =
-                                new Intl.NumberFormat('es-CL', {
-                                    style: 'currency',
-                                    currency: 'CLP'
-                                }).format(total);
-                        });
-                });
-        </script>
-
         <!-- HEADER -->
         <header class="header">
             <div class="brand">
@@ -99,15 +48,16 @@
                 <div class="info-left">
                     <div class="price">
                         <span id="titulo"></span>
-                        <span>Valor UF:: <bold id="valorUF">Cargando UF...</bold></span>
-                        <span id="precioUF"></span>
-                        <span>valor CLP:: <bold id="precioCLP">Cargando...</bold></span>
+                        <span>Valor UF hoy: <bold id="valorUF">Cargando UF...</bold></span>
+                        <span>Valor: <bold id="precioUF"></bold></span>
+                        <span>valor: <bold id="precioCLP">Cargando...</bold></span>
                     </div>
                     <ul class="featuress" id="datos"></ul> 
                 </div>
             </section>
         </main>
 
+        <script src="js/valores.js"></script>
         <script src="js/propiedad.js"></script>
         <script src="js/galeria.js"></script>
     </body>

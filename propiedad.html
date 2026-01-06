@@ -22,7 +22,7 @@
             });
         </script>
         <script>
-            const precioUF = 5000;
+            const precioUF = prop.precio_uf;
 
             fetch("https://mindicador.cl/api/uf")
             .then(r => r.json())
@@ -80,7 +80,7 @@
                     <div class="price">
                         <span id="titulo"></span>
                         <span>Valor UF: <bold id="valorUF">Cargando UF...</bold></span>
-                        <span id="valor"> UF</span>
+                        <span id="valor"></span>
                         <span>valor CLP: <bold id="precioCLP">Cargando...</bold></span>
                     </div>
                     <ul class="featuress" id="datos"></ul> 

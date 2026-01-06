@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <script>
+        <!--script>
             fetch("https://mindicador.cl/api/uf")
             .then(response => response.json())
             .then(data => {
@@ -20,21 +20,30 @@
             .catch(error => {
                 document.getElementById("valorUF").innerText = "UF no disponible";
             });
-        </script>
+        </script-->
         <script>
-            const precioUF = prop.precio_uf;
+            fetch('json/propiedad.json')
+                .then(res => res.json())
+                .then(data => {
+                    const prop = data[0];
+                    const precioUF = prop.precio_uf;
 
-            fetch("https://mindicador.cl/api/uf")
-            .then(r => r.json())
-            .then(d => {
-                const ufHoy = d.serie[0].valor;
-                const total = precioUF * ufHoy;
-                document.getElementById("precioCLP").innerText =
-                new Intl.NumberFormat('es-CL', {
-                    style: 'currency',
-                    currency: 'CLP'
-                }).format(total);
-            });
+                    document.getElementById("precioUF").innerText =
+                        new Intl.NumberFormat('es-CL').format(precioUF) + " UF";
+
+                    fetch("https://mindicador.cl/api/uf")
+                        .then(r => r.json())
+                        .then(d => {
+                            const ufHoy = d.serie[0].valor;
+                            const total = precioUF * ufHoy;
+                            
+                            document.getElementById("precioCLP").innerText =
+                                new Intl.NumberFormat('es-CL', {
+                                    style: 'currency',
+                                    currency: 'CLP'
+                                }).format(total);
+                        });
+                });
         </script>
 
         <!-- HEADER -->
@@ -79,8 +88,8 @@
                 <div class="info-left">
                     <div class="price">
                         <span id="titulo"></span>
-                        <span>Valor UF: <bold id="valorUF">Cargando UF...</bold></span>
-                        <span id="valor"></span>
+                        <span>Valor UF: <bold id="precioUF">Cargando UF...</bold></span>
+                        <span id="precioUF"></span>
                         <span>valor CLP: <bold id="precioCLP">Cargando...</bold></span>
                     </div>
                     <ul class="featuress" id="datos"></ul> 

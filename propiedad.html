@@ -25,7 +25,12 @@
             fetch('json/propiedad.json')
                 .then(res => res.json())
                 .then(data => {
-                    const prop = data[0];
+                    const prop = data.find(p => p.id === propertyId);
+
+                    if (!prop) {
+                        document.body.innerHTML = '<h2>Propiedad no encontrada</h2>';
+                        return;
+                    }
                     const precioUF = prop.precio_uf;
 
                     document.getElementById("precioUF").innerText =

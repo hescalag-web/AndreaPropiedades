@@ -37,6 +37,12 @@
                             const ufHoy = d.serie[0].valor;
                             const total = precioUF * ufHoy;
                             
+                            document.getElementById("valorUF").innerText =
+                                new Intl.NumberFormat('es-CL', {
+                                    style: 'currency',
+                                    currency: 'CLP'
+                                }).format(ufHoy);
+
                             document.getElementById("precioCLP").innerText =
                                 new Intl.NumberFormat('es-CL', {
                                     style: 'currency',
@@ -88,9 +94,9 @@
                 <div class="info-left">
                     <div class="price">
                         <span id="titulo"></span>
-                        <span>Valor UF: <bold id="precioUF">Cargando UF...</bold></span>
+                        <span>Valor UF:: <bold id="valorUF">Cargando UF...</bold></span>
                         <span id="precioUF"></span>
-                        <span>valor CLP: <bold id="precioCLP">Cargando...</bold></span>
+                        <span>valor CLP:: <bold id="precioCLP">Cargando...</bold></span>
                     </div>
                     <ul class="featuress" id="datos"></ul> 
                 </div>
